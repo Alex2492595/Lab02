@@ -1,3 +1,5 @@
+//https://github.com/Alex2492595/Lab02
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
@@ -11,6 +13,8 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
+import javafx.scene.image.*;
+import java.util.Random;
 
 /**
  *
@@ -32,6 +36,14 @@ public class Lab02 extends Application {
         Label lblTop = new Label("Random Game");
         Label lblBottom = new Label("Waiting...");
         Label lblImage = new Label();
+        
+        Random random = new Random();
+        int rdm = random.nextInt(101, 121);
+        
+        String path = "file:images/" + rdm + ".jpg";
+        
+        Image img = new Image(path);
+        lblImage.setGraphic(new ImageView(img));
         
         middle.getChildren().add(lblImage);
         
